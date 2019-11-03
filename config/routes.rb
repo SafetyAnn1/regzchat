@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  root "chats#index"
+
+  root controller: :rooms, action: :index
+
+  resources :room_messages
+  resources :rooms
 end
