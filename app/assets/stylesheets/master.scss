@@ -1,2 +1,51 @@
 @import "bootstrap";
 @import "font-awesome";
+
+.avatar {
+  max-height:30px;
+  border-radius: 15px;
+  width:auto;
+  vertical-align:middle;
+}
+
+.room-nav-link {
+  border: 1px solid lighten(#236899, 40%);
+  background: lighten(#236899, 45%);
+
+  & + .room-nav-link {
+    border-top: 0 none;
+  }
+}
+
+.chat {
+  border: 1px solid lighten(#236899, 40%);
+  background: lighten(#236899, 50%);
+  height: 50vh;
+  border-radius: 5px 5px 0 0;
+  overflow-y: auto;
+}
+
+.chat-input {
+  border-top: 0 none;
+  border-radius: 0 0 5px 5px;
+}
+
+.chat-message-container {
+  padding: 5px;
+
+  .avatar {
+    margin: 5px;
+  }
+
+  .message-content {
+    padding: 5px;
+    border: 1px solid #dcecf7;
+    border-radius: 5px;
+    background: lighten(#dcecf7, 10%);
+    color: #3a6a8c;
+  }
+
+  & + .chat-message-container {
+    margin-top: 10px;
+  }
+}
