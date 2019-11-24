@@ -1,0 +1,7 @@
+fname:string
+lname:string
+professional_title:string
+phone:string
+profile_picture_url:string
+
+rails generate migration AddFieldsToUsers fname:string lname:string professional_title:string phone:string profile_picture_url:string
