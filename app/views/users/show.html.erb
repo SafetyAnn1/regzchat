@@ -6,9 +6,11 @@
           <div class="card-body text-center bg-primary rounded-top">
            <div class="user-box">
             <img class="avatar-card" src="<%= current_user.gravatar_url %>">
-            </div>
-          <h5 class="mb-1 text-white">Ann Meier</h5>
-          <h6 class="text-light">Graphic Designer</h6>
+           </div>
+                <h5 class="mb-1 text-white"><%= @user.full_name %></h5>
+                <h6 class="text-light"><%= @user.professional_title %></h6>
+                <br />
+
          </div>
           <div class="card-body">
             <ul class="list-group shadow-none">
@@ -26,7 +28,7 @@
                     <i class="fa fa-envelope"></i>
                   </div>
                   <div class="list-details">
-                    <span>info@example.com</span>
+                    <span><%= @user.email %></span>
                     <small>Email Address</small>
                   </div>
                 </li>
@@ -135,18 +137,21 @@
                     </table>
                 </div>
                 <div class="tab-pane" id="edit">
-                    <form>
-                        <div class="form-group row">
-                            <label class="col-lg-3 col-form-label form-control-label">First name</label>
+                    <%= simple_form_for @user, wrapper: :horizontal_form do |f| %>
+                        <%= f.error_notification %>
+                        <!-- <div class="form-group row"> -->
+                            <!-- <label class="col-lg-3 col-form-label form-control-label">First name</label>
                             <div class="col-lg-9">
                                 <input class="form-control" type="text" value="Mark">
-                            </div>
-                        </div>
+                            </div> -->
+                            <%= f.input :fname, label:"First Name", label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-9"} %>
+                        <!-- </div> -->
                         <div class="form-group row">
-                            <label class="col-lg-3 col-form-label form-control-label">Last name</label>
+                            <!-- <label class="col-lg-3 col-form-label form-control-label">Last name</label>
                             <div class="col-lg-9">
                                 <input class="form-control" type="text" value="Jhonsan">
-                            </div>
+                            </div> -->
+                            <%= f.input :lname, label:"Last Name", input_html: {class: "col-lg-9 form-control"} %>
                         </div>
                         <div class="form-group row">
                             <label class="col-lg-3 col-form-label form-control-label">Email</label>
@@ -204,7 +209,7 @@
                                 <input type="button" class="btn btn-primary" value="Save Changes">
                             </div>
                         </div>
-                    </form>
+                    <% end %>
                 </div>
             </div>
         </div>
