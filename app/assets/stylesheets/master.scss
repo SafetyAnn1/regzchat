@@ -3,28 +3,34 @@
 @import url(http://fonts.googleapis.com/css?family=Fjalla+One);
 @import url(http://fonts.googleapis.com/css?family=Gudea);
 
-html,
-body {
-  height: 100%;
-  padding-top: 20px;
-}
 
-#page-content {
-  flex: 1 0 auto;
-}
-
-.carousel-item {
-  height: 65vh;
-  min-height: 300px;
-  background: no-repeat center center scroll;
+.banner {
+  position: relative;
+  background-image: image_url('chats3.png');
+  padding-top: 150px;
+  padding-bottom: 90px;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: auto auto;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  overflow: hidden;
+  margin-bottom: 30px;
 }
 
-.portfolio-item {
+.banner .content h2 {
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.banner .content p {
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  font-weight: 400;
   margin-bottom: 30px;
+  font-size: 19px;
+  line-height: 1.5;
 }
 
 .logbox {
@@ -49,6 +55,46 @@ body {
   padding-bottom: 80px;
   padding-left: 30px;
   padding-right: 30px;
+}
+
+.btn-primary {
+  color: white;
+  background-color: #38ab20;
+  border-color: #38ab20;
+  box-shadow: 1px 1px 3px 0 #58595c;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: transparent;
+  border-color: #000;
+}
+
+.btn-primary-a {
+  color: white;
+  background-color: #0e548a;
+  border-color: #0e548a;
+  box-shadow: 1px 1px 3px 0 #58595c;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.btn-primary-a:hover, .btn-primary-a:focus, .btn-primary-a:active, .btn-primary-a.active, .open>.dropdown-toggle.btn-primary-a {
+  color: #fff;
+  background-color: transparent;
+  border-color: #000;
+}
+
+.btn-secondary {
+  background-color: #177fcf; 
+}
+
+.link_to {
+  text-decoration: none !important;
+  color: #fff;
 }
 
 .avatar {
@@ -108,7 +154,7 @@ body {
 .navbar-inverse .navbar-brand {
   color: #edd521;
   font-family: 'capture_itregular', sans-serif;
-  font-size: 30px;
+  font-size: 40px;
   letter-spacing: 3px;
   margin-bottom: 0px;
 }
@@ -614,7 +660,7 @@ body {
 
 .title-median {
   line-height: 20px;
-  margin: 0 0 15px;
+  margin: 0 0 20px;
   color: #edd521;
   font-family: 'capture_itregular', sans-serif;
   font-size: 30px;
@@ -623,6 +669,7 @@ body {
 
 .footerp p {
   font-family: 'Gudea', sans-serif; 
+  color: #d1cfcf;
 }
 
 #social:hover {
@@ -643,27 +690,35 @@ body {
 .social-fb {  
   color: #d1cfcf;
 }
+
 .social-fb:hover {  
   color: #3B5998;
 }
+
 .social-tw {
   color: #d1cfcf;
 }
+
 .social-tw:hover {
   color: #4099FF;
 }
+
 .social-gp {
   color: #d1cfcf;
 }
+
 .social-gp:hover {
   color: #d34836;
 }
+
 .social-em {
   color: #d1cfcf;
 }
+
 .social-em:hover {
   color: #f39c12;
 }
+
 .nomargin { 
   margin:0px; 
   padding:0px;
@@ -674,19 +729,118 @@ body {
   min-height: 30px;
   width: 100%;
 }
+
 .copyright {
   color: #878484;
   line-height: 30px;
   min-height: 30px;
   padding: 7px 0;
+  font-size: 14px;
 }
+
 .design {
   color: #878484;
   line-height: 30px;
   min-height: 30px;
   padding: 7px 0;
   text-align: right;
+  font-size: 14px;
 }
+
 .design a {
   color: #878484;
+  font-size: 14px;
+}
+
+/*============ Service Features style ============*/
+.service-heading-block{
+  display:block;
+  margin-bottom:30px;
+  }
+.title {
+  display: block;
+  font-size: 30px;
+  font-weight: 200;
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-size: 18px;
+  font-weight: 100;
+  line-height: 24px;
+}
+.feature-block {
+  background-color: #fff;
+  border-radius: 2px;
+  padding: 15px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  margin-bottom: 15px;
+  transition:all ease .5s
+}
+.ms-feature:hover, 
+.ms-feature:focus {
+  background-color: #fafafa;
+  box-shadow: 0 3px 4px 3px rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 3px rgba(0, 0, 0, 0.12);
+}
+.fb-icon {
+  border-radius: 50%;
+  display: block;
+  font-size: 36px;
+  height: 80px;
+  line-height: 80px;
+  text-align:center;
+  margin:1rem auto;
+  width: 80px;
+  transition: all 0.5s ease 0s;
+}
+.feature-block:hover .fb-icon,
+.feature-block:focus .fb-icon {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  transform: rotate(360deg);
+}
+.fb-icon.color-info {
+  background-color: #5bc0de;
+  color: #fff;
+}
+.fb-icon.color-warning {
+  background-color: #eea236;
+  color: #fff;
+}
+.fb-icon.color-success {
+  background-color: #5cb85c;
+  color: #fff;
+}
+.fb-icon.color-danger {
+  background-color: #d9534f;
+  color: #fff;
+}
+.feature-block h4 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 3rem 0 1rem;
+}
+.color-info {
+  color: #46b8da;
+}
+.color-warning {
+  color: #f0ad4e;
+}
+.color-success {
+  color: #4cae4c;
+}
+.color-danger {
+  color: #d43f3a;
+}
+.btn-custom{
+  border: medium none;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  margin: 10px 1px;
+  outline: 0 none;
+  padding: 8px 30px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
 }
