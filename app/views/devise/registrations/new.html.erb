@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="logbox col-10 offset-1">
-            <h4><center>Sign up to RegzCHAT</center></h4>
+            <h4><center>Register for RegzCHAT</center></h4>
             <img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
                                 alt="">
               <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -12,27 +12,29 @@
                               required: true,
                               autofocus: true,
                               input_html: { autocomplete: "email" }%>
-                  <%= f.input :fname,
+                  <%= f.input :fname, label:"First Name",
                               required: true %>
-                  <%= f.input :lname,
+                  <%= f.input :lname, label:"Last Name",
                               required: true %>
-                  <%= f.input :username,
+                  <%= f.input :professional_title, label:"Professional Title",
                               required: true %>
-                  <%= f.input :password,
+                  <%= f.input :phone, label:"Phone (optional)",
+                              required: false %>                       
+                  <%= f.input :username, label:"Username",
+                              required: true %>
+                  <%= f.input :password, label:"Password",
                               required: true,
                               hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                               input_html: { autocomplete: "new-password" } %>
-                  <%= f.input :password_confirmation,
+                  <%= f.input :password_confirmation, label:"Password Confirmation",
                               required: true,
                               input_html: { autocomplete: "new-password" } %>
                 </div>
 
                 <div class="form-actions">
-                  <%= f.button :submit, "Sign up", class: 'btn btn-lg btn-success btn-block' %>
+                  <%= f.button :submit, "Register", class: 'btn btn-lg btn-primary btn-block' %>
                 </div>
               <% end %>
-              <br></br>
-              <%= render "devise/shared/links" %>
         </div>
     </div>
 </div>
