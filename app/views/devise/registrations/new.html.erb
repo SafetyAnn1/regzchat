@@ -1,9 +1,12 @@
 <div class="container">
     <div class="row">
         <div class="logbox col-10 offset-1">
-            <h4><center>Register for RegzCHAT</center></h4>
-            <img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
-                                alt="">
+          <div class="pmtalert">
+              Your payment was received and your receipt will be emailed shortly!  Please register below.
+          </div>
+          <img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"alt="">
+            <h3><center>Register for RegzCHAT</center></h3>
+            
               <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
                 <%= f.error_notification %>
 

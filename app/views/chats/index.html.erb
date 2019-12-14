@@ -3,13 +3,13 @@
     <div class="content">
       <div class="container">
         <div class="col-md-8 col-sm">
-          <h2>RAJ ENGINEERING VIBRATORS</h2>
-          <p>We are supplier of Construction Vibrator, Construction Rammer, Concrete Mixer, Mini Lift, Steel Bar Cutter, Material Handling Equipment, Lab Testing Equipment and others.</p>
+          <h2>Feedback. Support. Advice. Resources. Critiques.</h2>
+          <p>Join our community of safety experts, trainers, safety professionals and business owners dedicated to creating a thriving health & safety culture at work. </p>
 
           <% if user_signed_in? %>
           <%= link_to 'CHAT', rooms_path, class: 'btn btn-success btn-lg' %>
           <% else %>
-          <%= link_to 'REGISTER', new_user_registration_path, class: 'btn btn-primary btn-lg' %>
+          <%= link_to 'REGISTER TODAY', root_path(:anchor => "my_id"),class: 'btn btn-primary btn-lg' %>
           <% end %>
           
         </div>
@@ -78,70 +78,54 @@
             <div class="container">
               <div class="col-md-12 col-sm">
                 <div class="content">
-                  <h2>RAJ ENGINEERING VIBRATORS</h2>
-                  <p>We are supplier of Construction Vibrator, Construction Rammer, Concrete Mixer, Mini Lift, Steel Bar Cutter, Material Handling Equipment, Lab Testing Equipment and others.</p>
+                  <h2>Feedback. Support. Advice. Resources. Critiques.</h2>
+                  <p>Join our community of safety experts, trainers, safety professionals and business owners dedicated to creating a thriving health & safety culture at work. By registering to chat with a professional today you will move closer to your companies compliance tomorrow.</p>
 
                   <% if user_signed_in? %>
                   <center><%= link_to 'START CHATTING', rooms_path, class: 'btn btn-success btn-lg' %></center>
                   <% else %>
-                  <center><%= link_to 'REGISTER', new_user_registration_path, class: 'btn btn-primary btn-lg' %></center>
+                  <center><%= link_to 'REGISTER', root_path(:anchor => "my_id"), class: 'btn btn-primary btn-lg' %></center>
                   <% end %> 
                 </div>
               </div>
             </div>
           </div>
 
-  
+  <div id="my_id"></div>
     <div class="service-heading-block">
         <h2 class="text-center text-primary title"><strong>Pricing</strong></h2>
         <p class="text-center sub-title">Lorem ipsum dolor sit amet,<span class="text-primary">consectetur adipisicing</span> elit.<br/> Dolor alias provident excepturi eligendi, nam numquam iusto eum illum, ea quisquam.</p>
       </div>
 
-    <div class="container"> 
+      <div class="container"> 
       <div class="card-deck mb-3 text-center">
         <div class="card mb-4 box-shadow">
-          <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Lite</h4>
+          <div class="card-headerPro">
+            <h4 class="my-0 font-weight-normal"><strong>Professional</strong></h4>
           </div>
-          <div class="card-body">
-            <h1 class="card-title pricing-card-title">$5 <small class="text-muted">/ mo</small></h1>
-            <ul class="list-unstyled mt-3 mb-4">
-              <li><i class="fa fa-check 2x"></i> 10 chat rooms included</li>
-              <li><i class="fa fa-check 2x"></i> Unlimited Messages</li>
-              <li><i class="fa fa-check 2x"></i> Free Access to all RegzHUB Services</li>
-              <li><i class="fa fa-check 2x"></i> Email Support</li>
-            </ul>
-            <button type="button" class="btn btn-lg btn-block btn-outline-primary">Register Today</button>
-          </div>
-        </div>
-        <div class="card mb-4 box-shadow">
-          <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Pro</h4>
-          </div>
-          <div class="card-body">
+          <div class="card-bodyPro">
             <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
-            <ul class="list-unstyled mt-3 mb-4">
-              <li><i class="fa fa-check 2x"></i> 30 chat rooms included</li>
-              <li><i class="fa fa-check 2x"></i> Unlimited Messages</li>
-              <li><i class="fa fa-check 2x"></i> Free Access to all RegzHUB Services</li>
-              <li><i class="fa fa-check 2x"></i> Email & Phone Support</li>
-            </ul>
-            <button type="button" class="btn btn-lg btn-block btn-primary">Get Started</button>
-          </div>
-        </div>
-        <div class="card mb-4 box-shadow">
-          <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Enterprise</h4>
-          </div>
-          <div class="card-body">
-            <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
             <ul class="list-unstyled mt-3 mb-4">
               <li><i class="fa fa-check 2x"></i> Unlimited chat rooms</li>
               <li><i class="fa fa-check 2x"></i> Unlimited Messages</li>
               <li><i class="fa fa-check 2x"></i> Free Access to all RegzHUB Services</li>
               <li><i class="fa fa-check 2x"></i> Personal Safety Coach</li>
             </ul>
-            <button type="button" class="btn btn-lg btn-block btn-primary">Contact Us</button>
+            <%= form_tag charges_path do %>
+            <article>
+              <% if flash[:error].present? %>
+                <div id="error_explanation">
+                  <p><%= flash[:error] %></p>
+                </div>
+              <% end %>
+            </article>
+
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                    data-description="RegzHUB Professional"
+                    data-amount="2900"
+                    data-locale="auto"></script>
+          <% end %>
           </div>
         </div>
      </div>
