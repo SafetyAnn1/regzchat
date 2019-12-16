@@ -8,9 +8,9 @@
         <p>Join our community of safety experts, trainers, safety professionals and business owners dedicated to creating a thriving health & safety culture at work. </p>
 
         <% if user_signed_in? %>
-          <%= link_to 'CLICK TO CHAT', rooms_path, class: 'btn btn-success btn-lg' %>
-          <% else %>
-          <%= link_to 'REGISTER TODAY', new_user_registration_path, class: 'btn btn-primary btn-lg' %>
+        <%= link_to 'CLICK TO CHAT', rooms_path, class: 'btn btn-success btn-lg' %>
+        <% else %>
+        <%= link_to 'REGISTER TODAY', new_user_registration_path, class: 'btn btn-primary btn-lg' %>
         <% end %>     
       </div>
     </div>
@@ -111,6 +111,11 @@
             <li><i class="fa fa-check 2x"></i> Free Access to All RegzHUB Services</li>
             <li><i class="fa fa-check 2x"></i> Personal Safety Coach</li>
           </ul>
+          <% if !user_signed_in? %>
+          <center><%= link_to 'REGISTER', new_user_registration_path, class: 'btn btn-primary btn-lg' %></center>
+          <% elsif user_signed_in? && current_user.subscribed? %>
+          <button type="button" class="btn btn-danger btn-lg">SUBSCRIBED</button>
+          <% else %>
           <%= form_tag charges_path do %>
           <article>
             <% if flash[:error].present? %>
@@ -126,9 +131,11 @@
           data-label="Subscribe To All Services"
           data-amount="1500"
           data-locale="auto"></script>
-          <% end %>
+          <% end %>           
+          <% end %> 
         </div>
       </div>
     </div>
   </div>
+</div>
 </div>

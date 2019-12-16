@@ -87,9 +87,9 @@
                             <tr>
                                 <td>
                                     <% if @user.subscribed? %> 
-                                    <strong>Account Status: </strong>Active
+                                    <strong>Account Status: </strong>Active<button type="button" class="pull-right btn btn-success">SUBSCRIBED</button>
                                     <% else %>
-                                    <strong>Account Status: </strong>Inactive
+                                    <strong>Account Status: </strong>Inactive<button type="button" class="pull-right btn btn-danger">NOT SUBSCRIBED</button>
                                     <% end %>
                                 </td>
                             </tr>

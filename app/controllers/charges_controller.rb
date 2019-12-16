@@ -1,10 +1,10 @@
 class ChargesController < ApplicationController
-  before_action :authenticate_user!
 
   def new
   end
 
   def create
+
     # Amount in cents
     @amount = 1500
 
@@ -24,7 +24,7 @@ class ChargesController < ApplicationController
       currency: 'usd',
     })
 
-    redirect_to new_user_registration_path
+    redirect_to new_user_registration_path notice: "Your subscription has been charged succesfully."
 
   rescue Stripe::CardError => e
     flash[:error] = e.message
