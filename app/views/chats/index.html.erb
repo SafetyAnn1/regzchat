@@ -1,18 +1,18 @@
 <!-- Banner -->
 <div class="banner">
-    <div class="content">
-      <div class="container">
-        <div class="col-md-8 col-sm">
-          <h2>Feedback. Support. Advice. Resources. Critiques.</h2>
-          <p>Join our community of safety experts, trainers, safety professionals and business owners dedicated to creating a thriving health & safety culture at work. </p>
+  <div class="content">
+    <div class="container">
+      <div class="col-md-8 col-sm">
+        <h2>Chat with Your Personal Safety Professional</h2>
+        <h4>Get Feedback. Support. Advice. Resources. Critiques.</h4>
+        <p>Join our community of safety experts, trainers, safety professionals and business owners dedicated to creating a thriving health & safety culture at work. </p>
 
-          <% if user_signed_in? %>
-          <%= link_to 'CHAT', rooms_path, class: 'btn btn-success btn-lg' %>
+        <% if user_signed_in? %>
+          <%= link_to 'CLICK TO CHAT', rooms_path, class: 'btn btn-success btn-lg' %>
           <% else %>
-          <%= link_to 'REGISTER TODAY', root_path(:anchor => "my_id"),class: 'btn btn-primary btn-lg' %>
-          <% end %>
-          
-        </div>
+          <%= link_to 'REGISTER TODAY', new_user_registration_path, class: 'btn btn-primary btn-lg' %>
+        <% end %>     
+      </div>
     </div>
   </div>
 </div>
@@ -32,7 +32,7 @@
         <span class="fb-icon color-info">
           <i class="fa fa-cloud-upload" aria-hidden="true"></i>
         </span>
-        <h4 class="color-info">Cloud Upload</h4>
+        <h4 class="color-info">REGZPERT</h4>
         <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dicta error.</p> 
         <a href="http://regzpert-meier.herokuapp.com/" target = "_blank" class="btn btn-success">Click here</a>
       </div>
@@ -40,94 +40,95 @@
 
     <div class="col-lg-3 col-md-6 col-sm-6">
      <div class="text-center feature-block">
-        <span class="fb-icon color-warning">
-          <i class="fa fa-desktop" aria-hidden="true"></i>
-        </span>
-        <h4 class="color-warning">Computer Service</h4>
-        <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dicta error.</p>
-        <a href="javascript:void(0)" class="btn btn-success">Click here</a>
-      </div>
-    </div>
-            
-    <div class="col-lg-3 col-md-6 col-sm-6">
-      <div class="text-center feature-block">
-        <span class="fb-icon color-success">
-          <i class="fa fa-envelope" aria-hidden="true"></i>
-        </span>
-        <h4 class="color-success">Email Service</h4>
-        <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dicta error.</p>
-        <a href="javascript:void(0)" class="btn btn-success">Click here</a>
-      </div>
-    </div>
-            
-    <div class="col-lg-3 col-md-6 col-sm-6">
-      <div class="text-center feature-block">
-        <span class="fb-icon color-danger">
-          <i class="fa fa-fire" aria-hidden="true"></i>
-        </span>
-        <h4 class="color-danger">Quality Service</h4>
-        <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dicta error.</p>
-        <a href="javascript:void(0)" class="btn btn-success">Click here</a>
-      </div>
-    </div>
-  </div>  
-  </div>  
-
-
-        <div class="fullwidth">
-            <div class="container">
-              <div class="col-md-12 col-sm">
-                <div class="content">
-                  <h2>Feedback. Support. Advice. Resources. Critiques.</h2>
-                  <p>Join our community of safety experts, trainers, safety professionals and business owners dedicated to creating a thriving health & safety culture at work. By registering to chat with a professional today you will move closer to your companies compliance tomorrow.</p>
-
-                  <% if user_signed_in? %>
-                  <center><%= link_to 'START CHATTING', rooms_path, class: 'btn btn-success btn-lg' %></center>
-                  <% else %>
-                  <center><%= link_to 'REGISTER', root_path(:anchor => "my_id"), class: 'btn btn-primary btn-lg' %></center>
-                  <% end %> 
-                </div>
-              </div>
-            </div>
-          </div>
-
-  <div id="my_id"></div>
-    <div class="service-heading-block">
-        <h2 class="text-center text-primary title"><strong>Pricing</strong></h2>
-        <p class="text-center sub-title">Lorem ipsum dolor sit amet,<span class="text-primary">consectetur adipisicing</span> elit.<br/> Dolor alias provident excepturi eligendi, nam numquam iusto eum illum, ea quisquam.</p>
-      </div>
-
-      <div class="container"> 
-      <div class="card-deck mb-3 text-center">
-        <div class="card mb-4 box-shadow">
-          <div class="card-headerPro">
-            <h4 class="my-0 font-weight-normal"><strong>Professional</strong></h4>
-          </div>
-          <div class="card-bodyPro">
-            <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
-            <ul class="list-unstyled mt-3 mb-4">
-              <li><i class="fa fa-check 2x"></i> Unlimited chat rooms</li>
-              <li><i class="fa fa-check 2x"></i> Unlimited Messages</li>
-              <li><i class="fa fa-check 2x"></i> Free Access to all RegzHUB Services</li>
-              <li><i class="fa fa-check 2x"></i> Personal Safety Coach</li>
-            </ul>
-            <%= form_tag charges_path do %>
-            <article>
-              <% if flash[:error].present? %>
-                <div id="error_explanation">
-                  <p><%= flash[:error] %></p>
-                </div>
-              <% end %>
-            </article>
-
-            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                    data-description="RegzHUB Professional"
-                    data-amount="2900"
-                    data-locale="auto"></script>
-          <% end %>
-          </div>
-        </div>
-     </div>
+      <span class="fb-icon color-warning">
+        <i class="fa fa-desktop" aria-hidden="true"></i>
+      </span>
+      <h4 class="color-warning">REGZVID</h4>
+      <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dicta error.</p>
+      <a href="http://regzvid-meier.herokuapp.com/" target = "_blank" class="btn btn-success">Click here</a>
     </div>
   </div>
+
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="text-center feature-block">
+      <span class="fb-icon color-success">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+      </span>
+      <h4 class="color-success">REGZGRAM</h4>
+      <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dicta error.</p>
+      <a href="http://regzgram-meier.herokuapp.com/" target = "_blank" class="btn btn-success">Click here</a>
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="text-center feature-block">
+      <span class="fb-icon color-danger">
+        <i class="fa fa-fire" aria-hidden="true"></i>
+      </span>
+      <h4 class="color-danger">REGZTODO</h4>
+      <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dicta error.</p>
+      <a href="http://regztodo-meier.herokuapp.com/" target = "_blank" class="btn btn-success">Click here</a>
+    </div>
+  </div>
+</div>  
+</div>  
+
+<div class="fullwidth">
+  <div class="container">
+    <div class="col-md-12 col-sm">
+      <div class="content">
+        <h2>Feedback. Support. Advice. Resources. Critiques.</h2>
+        <p>Join our community of safety experts, trainers, safety professionals and business owners dedicated to creating a thriving health & safety culture at work. By registering to chat with a professional today you will move closer to your company's compliance tomorrow.</p>
+
+        <% if user_signed_in? %>
+        <center><%= link_to 'START CHATTING', rooms_path, class: 'btn btn-success btn-lg' %></center>
+        <% else %>
+        <center><%= link_to 'REGISTER', new_user_registration_path, class: 'btn btn-primary btn-lg' %></center>
+        <% end %> 
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="Pricing"></div>
+<div class="service-heading-block">
+  <h2 class="text-center text-primary title"><strong>Pricing</strong></h2>
+  <p class="text-center sub-title">
+    Register for your subscription to <span class="text-primary"><strong>RegzCHAT</strong></span> services.<br/> For as low as <span class="text-primary"><strong>50 cents per day</strong></span> you can create chat rooms allowing you full access to your own Safety Professionals from all industries nationwide.</p>
+  </div>
+
+  <div class="container"> 
+    <div class="card-deck mb-3 text-center">
+      <div class="card mb-4 box-shadow">
+        <div class="card-headerPro">
+          <h4 class="my-0 font-weight-normal"><strong>Professional</strong></h4>
+        </div>
+        <div class="card-bodyPro">
+          <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li><i class="fa fa-check 2x"></i> Create Unlimited Chat Rooms</li>
+            <li><i class="fa fa-check 2x"></i> Unlimited Messages</li>
+            <li><i class="fa fa-check 2x"></i> Free Access to All RegzHUB Services</li>
+            <li><i class="fa fa-check 2x"></i> Personal Safety Coach</li>
+          </ul>
+          <%= form_tag charges_path do %>
+          <article>
+            <% if flash[:error].present? %>
+            <div id="error_explanation">
+              <p><%= flash[:error] %></p>
+            </div>
+            <% end %>
+          </article>
+
+          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="RegzHUB Professional"
+          data-label="Subscribe To All Services"
+          data-amount="1500"
+          data-locale="auto"></script>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

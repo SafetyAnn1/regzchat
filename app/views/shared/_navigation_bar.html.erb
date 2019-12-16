@@ -2,24 +2,31 @@
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-    <%= link_to 'RegzCHAT', root_path, class: 'navbar-brand' %>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav ml-auto mt-2 mt-md-0">      
-          <% if user_signed_in? %> 
-          <div class="dropdown">      
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <img class="avatar" src="<%= current_user.gravatar_url %>">
-              <%= current_user.username %>
-              </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-              <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'dropdown-item' %>
-              <%= link_to 'My Profile', user_path(current_user), class: 'dropdown-item' %>
-            </div>                     
-          </div> 
-          <% else %>
-            <%= link_to 'LOGIN', new_user_session_path, class: "link_to" %>
-          <% end %>
-        </ul>
-      </div>
+  <%= link_to 'RegzCHAT', root_path, class: 'navbar-brand' %>
+  <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+    <li class="nav-item">
+      <%= link_to root_path, class: 'nav-link' do %>
+      <i class="fa fa-comments fa-5x"></i>
+      <% end %>
+    </li> 
+  </ul>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav ml-auto mt-2 mt-md-0">     
+      <% if user_signed_in? %> 
+      <div class="dropdown">      
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img class="avatar" src="<%= current_user.gravatar_url %>">
+          <%= current_user.username %>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'dropdown-item' %>
+          <%= link_to 'My Profile', user_path(current_user), class: 'dropdown-item' %>
+        </div>                     
+      </div> 
+      <% else %>
+      <%= link_to 'LOGIN', new_user_session_path, class: "link_to" %>
+      <% end %>
+    </ul>
+  </div>
 </nav>
 

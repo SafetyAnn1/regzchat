@@ -1,4 +1,5 @@
 class ChargesController < ApplicationController
+  before_action :authenticate_user!
 
   def new
   end
@@ -11,6 +12,10 @@ class ChargesController < ApplicationController
       email: params[:stripeEmail],
       source: params[:stripeToken],
     })
+
+    current_user.subscribed = true
+    current_user.stripeid = customer.id
+    current_user.save
 
     charge = Stripe::Charge.create({
       customer: customer.id,

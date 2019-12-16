@@ -6,130 +6,143 @@
           <div class="card-body text-center bg-primary rounded-top">
            <div class="user-box">
             <img class="avatar-card" src="<%= current_user.gravatar_url %>">
-           </div>
-                <h5 class="mb-1 text-white"><%= @user.full_name %></h5>
-                <h6 class="text-light"><strong><%= @user.professional_title %></strong></h6>
-                <br />
         </div>
-
-          <div class="card-body">
-            <ul class="list-group shadow-none">
-                <li class="list-group-item">
-                  <div class="list-icon">
-                    <i class="fa fa-phone-square"></i>
-                  </div>
-                  <div class="list-details">
-                    <span><%= @user.phone %></span>
-                    <small>Phone Number</small>
-                  </div>
-                </li>
-                <li class="list-group-item">
-                  <div class="list-icon">
-                    <i class="fa fa-envelope"></i>
-                  </div>
-                  <div class="list-details">
-                    <span><%= @user.email %></span>
-                    <small>Email Address</small>
-                  </div>
-                </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+        <h5 class="mb-1 text-white"><%= @user.full_name %></h5>
+        <h6 class="text-light"><strong><%= @user.professional_title %></strong></h6>
+        <br />
     </div>
-    
-        <div class="col-lg-8">
-           <div class="card z-depth-3">
-            <div class="card-body">
-            <ul class="nav nav-pills nav-pills-primary nav-justified">
-                <li class="nav-item">
-                    <a href="javascript:void();" data-target="#profile" data-toggle="pill" class="nav-link active show"><i class="icon-user"></i> <span class="hidden-xs">Profile</span></a>
-                </li>
-                <li class="nav-item">
-                    <a href="javascript:void();" data-target="#messages" data-toggle="pill" class="nav-link"><i class="icon-envelope-open"></i> <span class="hidden-xs">Biography</span></a>
-                </li>
-                <li class="nav-item">
-                    <a href="javascript:void();" data-target="#edit" data-toggle="pill" class="nav-link"><i class="icon-note"></i> <span class="hidden-xs">Edit</span></a>
-                </li>
-            </ul>
-            <div class="tab-content p-3">
-                <div class="tab-pane active show" id="profile">
-                    <h5 class="mb-3"><%= @user.full_name %></h5>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h5><strong><%= @user.professional_title %></strong></h5>
-                            <p>
-                              <%= @user.address %>
-                              <%= @user.city %>, <%= @user.state %>  <%= @user.zip %>  
-                            </p>
-                            <hr>
-                            <p>
-                              <%= @user.biography %>  
-                            </p>
-                        </div>
-                        <div class="col-md-12">
-                            <h5 class="mt-2 mb-3"><span class="fa fa-clock-o ion-clock float-right"></span>Last Update to Profile:</h5>
-                            <table class="table table-hover table-striped">
-                                <tbody>                                    
-                                    <tr>
-                                        <td>
-                                            <%= @user.updated_at.strftime("%B %d, %Y") %>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Profile Created: <strong><%= @user.created_at.strftime("%B %d, %Y") %></strong>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <!--/row-->
 
-                </div>
-                <div class="tab-pane" id="messages">
-                    <%= simple_form_for @user, wrapper: :horizontal_form do |f| %>
-                    <%= f.input :biography, label:"Add Your Biography:", :as => :text, :input_html => { :rows => 7 , :style => 'width: 100%'} %>
-                    
-                    <div class="col-lg-9">
-                        <%= f.submit 'Update', class: 'btn btn-primary' %>
-                    </div>
-                    <% end %>
-                </div>
+    <div class="card-body">
+        <ul class="list-group shadow-none">
+            <li class="list-group-item">
+              <div class="list-icon">
+                <i class="fa fa-phone-square"></i>
+            </div>
+            <div class="list-details">
+                <span><%= @user.phone %></span>
+                <small>Phone Number</small>
+            </div>
+        </li>
+        <li class="list-group-item">
+          <div class="list-icon">
+            <i class="fa fa-envelope"></i>
+        </div>
+        <div class="list-details">
+            <span><%= @user.email %></span>
+            <small>Email Address</small>
+        </div>
+    </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 
-                <div class="tab-pane" id="edit">
-                    <%= simple_form_for @user, wrapper: :horizontal_form do |f| %>
-                        <%= f.error_notification %>
-                            <%= f.input :fname, label:"First Name", label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-9"} %>
-                  
-                            <%= f.input :lname, label:"Last Name", label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-9"} %>
+<div class="col-lg-8">
+ <div class="card z-depth-3">
+    <div class="card-body">
+        <ul class="nav nav-pills nav-pills-primary nav-justified">
+            <li class="nav-item">
+                <a href="javascript:void();" data-target="#profile" data-toggle="pill" class="nav-link active show"><i class="icon-user"></i> <span class="hidden-xs">Profile</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:void();" data-target="#messages" data-toggle="pill" class="nav-link"><i class="icon-envelope-open"></i> <span class="hidden-xs">Biography</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:void();" data-target="#edit" data-toggle="pill" class="nav-link"><i class="icon-note"></i> <span class="hidden-xs">Edit</span></a>
+            </li>
+        </ul>
+        <div class="tab-content p-3">
+            <div class="tab-pane active show" id="profile">
+                <h2 class="mb-3"><%= @user.full_name %></h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5><strong><%= @user.professional_title %></strong></h5>
+                        <p>
+                          <%= @user.address %><br>
+                          <%= @user.city %>, <%= @user.state %>  <%= @user.zip %>  
+                      </p>
+                      <hr>
+                  </div>
+                      <div class="col-md-12">
+                      <p class="bio">
+                          <%= @user.biography %>  
+                      </p>
+                  </div>
 
-                            <%= f.input :email, label:"Email", label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-9"} %>
-
-                            <%= f.input :professional_title, label:"Title", label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-9"} %>
-
-                            <%= f.input :address, label:"Address", label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-9"} %>
-                            
-                            <%= f.input :city, label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-5"} %>
-
-                            <%= f.input :state, label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-2"} %>
-
-                            <%= f.input :zip, label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-2"} %>
-
-                            <%= f.input :phone, label:"Phone", label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-9"} %>
-                           
-                            <%= f.input :username, label:"Username", label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-9"} %>                     
-                            
-                            <div class="col-lg-9">
-                                <%= f.submit 'Update', class: 'btn btn-primary' %>
-                            </div>
-                        </div>
-                    <% end %>
+                  <div class="col-md-12">
+                    <h5 class="mt-2 mb-3"><span class="fa fa-clock-o ion-clock float-right"></span>Account Status:</h5>
+                    <table class="table table-hover table-striped">
+                        <tbody>                                    
+                            <tr>
+                                <td>
+                                    <strong>Last Update to Profile: </strong><%= @user.updated_at.strftime("%B %d, %Y") %>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Profile Created: <%= @user.created_at.strftime("%B %d, %Y") %></strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <% if @user.subscribed? %> 
+                                    <strong>Account Status: </strong>Active
+                                    <% else %>
+                                    <strong>Account Status: </strong>Inactive
+                                    <% end %>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
+            <!--/row-->
+
         </div>
+        <div class="tab-pane" id="messages">
+            <%= simple_form_for @user, wrapper: :horizontal_form do |f| %>
+            <%= f.input :biography, label:"Add Your Biography:", :as => :text, :input_html => { :rows => 7 , :style => 'width: 100%'} %>
+
+            <div class="col-lg-9">
+                <%= f.submit 'Update', class: 'btn btn-primary' %>
+            </div>
+            <% end %>
         </div>
+
+        <div class="tab-pane" id="edit">
+            <%= simple_form_for @user, wrapper: :horizontal_form do |f| %>
+            <%= f.error_notification %>
+
+            <%= f.input :fname, label:"First Name", label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-9"} %>
+
+            <%= f.input :lname, label:"Last Name", label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-9"} %>
+
+            <%= f.input :email, label:"Email", label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-9"} %>
+
+            <%= f.input :professional_title, label:"Title", label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-9"} %>
+
+            <%= f.input :address, label:"Address", label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-9"} %>
+
+            <%= f.input :city, label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-5"} %>
+
+            <%= f.input :state, label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-2"} %>
+
+            <%= f.input :zip, label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-2"} %>
+
+            <%= f.input :phone, label:"Phone", label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-9"} %>
+
+            <%= f.input :username, label:"Username", label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-9"} %>                     
+
+            <div class="col-lg-9">
+                <%= f.submit 'Update', class: 'btn btn-primary' %>
+            </div>
         </div>
+        <% end %>
     </div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>

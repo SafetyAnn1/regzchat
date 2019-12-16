@@ -1,3 +1,41 @@
-// Place all the styles related to the Rooms controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.room-nav-link {
+  border: 1px solid lighten(#8b8c8f, 20%);
+  background: lighten(#8b8c8f, 30%);
+
+  & + .room-nav-link {
+  border-top: 0 none;
+  }
+}
+
+.chat {
+  border: 1px solid lighten(#8b8c8f, 30%);
+  background: image_url('tiles.png');
+  height: 50vh;
+  border-radius: 5px 5px 0 0;
+  overflow-y: auto;
+}
+
+.chat-input {
+  border-top: 0 none;
+  border-radius: 3px;
+}
+
+.chat-message-container {
+  padding: 10px;
+
+  .avatar {
+  margin: 5px;
+  }
+
+.message-content {
+  padding: 5px;
+  border: 1px solid lighten(#8b8c8f, 30%);
+  border-radius: 5px;
+  background: lighten(#dcecf7, 10%);
+  color: #3a6a8c;
+}
+
+  & + .chat-message-container {
+    margin-top: 15px;
+  }
+}
