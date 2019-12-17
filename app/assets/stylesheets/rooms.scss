@@ -1,11 +1,22 @@
-.room-nav-link {
-  border: 1px solid lighten(#8b8c8f, 20%);
-  background: lighten(#8b8c8f, 30%);
-
-  & + .room-nav-link {
-  border-top: 0 none;
-  }
+.chatsbox { 
+  margin-top: 100px;
+  margin-bottom: 125px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  padding-left: 40px;
+  padding-right: 30px;
 }
+
+.room-nav-link {
+  border: 1px solid lighten(#124a94, 20%);
+  background: lighten(#124a94, 40%);
+  border-radius: 5px 5px 5px 5px;
+
+  /*& + .room-nav-link {*/
+  /*border-top: 0 none;*/
+  color: #fff;
+  }
+/*}*/
 
 .chat {
   border: 1px solid lighten(#8b8c8f, 30%);
@@ -13,11 +24,20 @@
   height: 50vh;
   border-radius: 5px 5px 0 0;
   overflow-y: auto;
+  margin-top: 20px;
 }
 
 .chat-input {
   border-top: 0 none;
   border-radius: 3px;
+}
+
+.chat-content {
+  padding-left: 30px;
+}
+
+.fa-comments {
+  color: #3474cf;
 }
 
 .chat-message-container {

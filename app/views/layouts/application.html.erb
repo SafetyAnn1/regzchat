@@ -11,8 +11,16 @@
 
   <body>    
             <%= render partial: 'shared/navigation_bar' %>
-            <%= yield %>      
-            <%= render partial: 'shared/footer' %>
+
+              <% if notice.present? %>
+                <p class="alert alert-info"><%= notice %></p>
+              <% end %>
+              <% if alert.present? %>
+                <p class="alert alert-danger"><%= alert %></p>
+              <% end %>
+            <%= yield %>     
+
+          <%= render partial: 'shared/footer' %>
 
   </body>
 </html>

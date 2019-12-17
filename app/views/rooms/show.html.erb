@@ -1,12 +1,8 @@
-<div class="row profilebox">
-  <div class="col-12 col-md-3">
-    <h1><%= @room.name %></h1>
-    <%= render partial: 'rooms' %>
-  </div>
-
-  <div class="col">
-    <div class="chat" data-channel-subscribe="room" data-room-id="<%= @room.id %>">
-      <% @room_messages.each do |room_message| %>
+<div class="container chatsbox">
+  <div class="row">
+    <div class="col">
+      <div class="chat" data-channel-subscribe="room" data-room-id="<%= @room.id %>">
+        <% @room_messages.each do |room_message| %>
         <div class="chat-message-container">
           <div class="row no-gutters">
             <div class="col-auto text-center">
@@ -28,43 +24,50 @@
             </div>
           </div>
         </div>
-      <% end %>
-    </div>
+        <% end %>
+      </div>
 
-    <%= simple_form_for @room_message, remote: true do |form| %>
+      <%= simple_form_for @room_message, remote: true do |form| %>
       <div class="input-group mb-3">
-        <%= form.input :message, as: :string,
-                                 wrapper: false,
-                                 label: false,
-                                 input_html: {
-                                   class: 'chat-input'
-                                 } %>
+        <%= form.input :message, as: :string, wrapper: false, label: false,
+        input_html: {class: 'chat-input'} %>
         <div class="input-group-append">
-          <%= form.submit "Send", class: 'btn btn-primary chat-input' %>
+          <%= form.submit "Send", class: 'btn btn-success chat-input' %>
         </div>
       </div>
-
       <%= form.input :room_id, as: :hidden %>
-    <% end %>
-  </div>
-</div>
+      <% end %>
+    </div>
+    
 
-<div class="d-none" data-role="message-template">
-  <div class="chat-message-container">
-    <div class="row no-gutters">
-      <div class="col-auto text-center">
-        <img src="" class="avatar" alt="" data-role="user-avatar">
-      </div>
+    <div class="d-none" data-role="message-template">
+      <div class="chat-message-container">
+        <div class="row no-gutters">
+          <div class="col-auto text-center">
+            <img src="" class="avatar" alt="" data-role="user-avatar">
+          </div>
 
-      <div class="col">
-        <div class="message-content">
-          <p class="mb-1" data-role="message-text"></p>
+          <div class="col">
+            <div class="message-content">
+              <p class="mb-1" data-role="message-text"></p>
 
-          <div class="text-right">
-            <small data-role="message-date"></small>
+              <div class="text-right">
+                <small data-role="message-date"></small>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="col-12 col-md-3">
+      <div class="mb-3">
+        <h2><center><i class="fa fa-comments fa-3x"></i></center></h2>
+        <h2><%= @room.name %></h2>
+        <br>
+        <%= render partial: 'rooms' %>
+      </div>
+
     </div>
   </div>
 </div>
