@@ -11,7 +11,7 @@ The goal of this project was to fufill the requirments of the UT Coding Bootcamp
 | Source | Link |
 | ------ | ------ |
 | Heroku | https://regzchat-ameier.herokuapp.com/ |
-| GitHub | [plugins/github/README.md][PlGh] |
+| GitHub | https://github.com/SafetyAnn1/regzchat |
 
 
 ### Ruby Application Gems Used in REGZCHAT
