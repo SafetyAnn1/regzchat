@@ -1,5 +1,9 @@
 # REGZCHAT Web Application Project
-> Short blurb about what your product does.
+
+## Chat with Your Personal Safety Professional
+### Get Feedback. Support. Advice. Resources. Critiques.
+
+> ### RegzCHAT is a web application designed to offer an interface between safety professionals to network with one another.  It is a small part of the RegzHUB umbrella of services for the Safety Professional.
 
 One to two paragraph statement about your product and what it does.
 
