@@ -38,9 +38,9 @@ The goal of this project was to fufill the requirments of the UT Coding Bootcamp
 |:---:|
 | Responsive Design |
 
-| [![VideoBlocks](https://d1ow200m9i3wyh.cloudfront.net/img/assets/videoblocks/images/logo.png)](http://videoblocks.com)  | [![AudioBlocks](https://dtyn3c8zjrx01.cloudfront.net/img/assets/audioblocks/images/logo.png)](http://audioblocks.com) |
+| ![LoginHasAccount](https://user-images.githubusercontent.com/52673792/71105816-c5baaf80-2183-11ea-8d1b-ade32c48ce81.gif)  | ![LoginHasAccount](https://user-images.githubusercontent.com/52673792/71105816-c5baaf80-2183-11ea-8d1b-ade32c48ce81.gif) |
 |:---:|:---:|
-| http://videoblocks.com | http://audioblocks.com | 
+| Login with Account | http://audioblocks.com | 
 
 
 
