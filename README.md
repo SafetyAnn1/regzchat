@@ -42,9 +42,9 @@ The goal of this project was to fufill the requirments of the UT Coding Bootcamp
 |:---:|:---:|
 | Login with Account | Updating User Profile Dashboard | 
 
-| ![LoginHasAccount](https://user-images.githubusercontent.com/52673792/71105816-c5baaf80-2183-11ea-8d1b-ade32c48ce81.gif)  | ![UpdateProfile](https://user-images.githubusercontent.com/52673792/71106136-66a96a80-2184-11ea-8021-a161df773df0.gif) |
+| ![RegisterToPayment](https://user-images.githubusercontent.com/52673792/71107474-bee16c00-2186-11ea-8ae9-45332213d659.gif)  | ![UpdateProfile](https://user-images.githubusercontent.com/52673792/71106136-66a96a80-2184-11ea-8021-a161df773df0.gif) |
 |:---:|:---:|
-| Login with Account | Updating User Profile Dashboard | 
+| Register User Redirect To Payment | Updating User Profile Dashboard | 
 
 
 
