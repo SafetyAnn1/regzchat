@@ -1,7 +1,5 @@
 # REGZCHAT Web Application Project
 
-> ## Chat with Your Personal Safety Professional
-
 > ### RegzCHAT is a web application designed to offer an interface between safety professionals to network with one another.  It is a small part of the RegzHUB umbrella of services for the Safety Professional.
 
 The goal of this project was to fufill the requirments of the UT Coding Bootcamp Solo Project (in lieu of the Agile team project).  This is the final assignment for graduation and is meant to meet the following criteria:
