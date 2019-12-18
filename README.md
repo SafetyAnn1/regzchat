@@ -72,9 +72,9 @@ The goal of this project was to fufill the requirments of the UT Coding Bootcamp
 3. Go to the same room in each browser
 4. Type a message and press send.  Watch the message pop up as each user types.
 
-![ResizeScreen](https://user-images.githubusercontent.com/52673792/71102580-5d1d0400-217e-11ea-829d-cae1d398fa28.gif)
+!![ChatRoomDemo](https://user-images.githubusercontent.com/52673792/71127225-468fa080-21b0-11ea-9d10-b2aa70ba7527.gif)
 |:---:|
-| Responsive Design |
+| User A and User B Chatting - Demonstration of Action Cable and Web Sockets |
 
 ## Development and Production Environment Setup
 - Sublime 3 Text Editor
