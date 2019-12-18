@@ -4,11 +4,10 @@
 
 The goal of this project was to fufill the requirments of the UT Coding Bootcamp Solo Project (in lieu of the Agile team project).  This is the final assignment for graduation and is meant to meet the following criteria:
 
-- Mentor (Michael Teeter) approval of the overall project plan
+- Mentor approval of the overall project plan
 - Functional Ruby on Rails application
 - Incorporates at least one external API
 - Deployed to Heroku
-
 
 ## RegzCHAT Project Links
 | Source | Link |
@@ -38,7 +37,7 @@ The goal of this project was to fufill the requirments of the UT Coding Bootcamp
 
 
 
-## Development Environment Setup
+## Development / Production Environment Setup
 - Sublime 3 Text Editor
 - Vagrant Box Virtual Machine
 - Running Ruby on Rails
