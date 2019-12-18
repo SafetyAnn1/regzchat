@@ -1,27 +1,26 @@
-# Product Name
+# REGZCHAT Web Application Project
 > Short blurb about what your product does.
-
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
 
 One to two paragraph statement about your product and what it does.
 
 ![](header.png)
 
-## Installation
+### Ruby Application Gems Used in REGZCHAT
 
-OS X & Linux:
+| Gems Used | Version |  Gem Purpose |
+| ------ | ------ | ------ |
+| Rails | 5.2.3 | System |
+| Rspec-Rails | 3.5 |  Testing and Development |
+| Jquery-Rails | Current | Jquery Library |
+| Bootstrap | 4.0.0.alpha6 | Bootstrap Library (Styling) |
+| Simple Form | Current | Forms used with Devise |
+| Font-Awesome Rails | Current | Icons Library |
+| Devise | Current | Rails authentication for Users |
+| Redis | Current | Used as a database, cache and message broker for ActionCable |
+| ActionCable | Current | Integrates WebSockets with REGZCHAT application |
+| Stripe | Current | Payment Processing API |
+| Figaro| Current | Securely configures Rails API Keys |
 
-```sh
-npm install my-crazy-module --save
-```
-
-Windows:
-
-```sh
-edit autoexec.bat
-```
 
 ## Usage example
 
