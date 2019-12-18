@@ -49,10 +49,9 @@ The goal of this project was to fufill the requirments of the UT Coding Bootcamp
 
 ## Usage Examples
 ## Login and Subscription Registraion and Stripe Payments 
-1. Open web application in a normal browser window and Log In as ## User A (make sure you have registed and paid)
-2. Open an addition browser window incognito and Log In as ## User B (make sure you have registed and paid)
-3. Go to the same room in each browser
-4. Type a message and press send.  Watch the message pop up as each user types.
+1. Open web application in a normal browser window 
+2. As a first time visitor you will need to Register.  Once registered you will be taken to the Pay Subscription button where you can pay via the Stripe API.  You do not have to pay at this time, but note you will NOT be given a CHAT button until you submit your payment with Stripe.
+3. Once paid the Chat buttons are enabled and you will have access to create, edit or delete chatrooms. You have the option to login (if existing account) and chat ONLY if you have paid for the subscription.
 
 ![ResizeScreen](https://user-images.githubusercontent.com/52673792/71102580-5d1d0400-217e-11ea-829d-cae1d398fa28.gif)
 |:---:|
@@ -76,10 +75,20 @@ The goal of this project was to fufill the requirments of the UT Coding Bootcamp
 |:---:|
 | User A and User B Chatting - Demonstration of Action Cable and Web Sockets |
 
+| ![CreateEditRoom](https://user-images.githubusercontent.com/52673792/71128174-3c6ea180-21b2-11ea-8739-0ab2cf502f97.gif)  | ![deletingRoom](https://user-images.githubusercontent.com/52673792/71128207-53ad8f00-21b2-11ea-81da-b4e01e4b8374.gif) |
+|:---:|:---:|
+| Create and Edit a Room | Deleting a Room | 
+
+
 ## Development and Production Environment Setup
 - Sublime 3 Text Editor
 - Vagrant Box Virtual Machine
 - Running Ruby on Rails
+- Redis
 - Database Management - PostgresSQL
 - Heroku
 - GitHub
+
+# Next Steps ...
+This web application was developed to demonstrate basic techniques and sound practices as well as a tool for continued success in web application development. I will be integrating this application as well as my other services Regzpert, RegzGRAM, RegzVID, RegzToDo to gether by learning and applying the principles of Micro Services where all apps will share a common login and payment system.
+
