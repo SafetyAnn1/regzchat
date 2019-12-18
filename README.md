@@ -72,7 +72,9 @@ The goal of this project was to fufill the requirments of the UT Coding Bootcamp
 3. Go to the same room in each browser
 4. Type a message and press send.  Watch the message pop up as each user types.
 
-
+![ResizeScreen](https://user-images.githubusercontent.com/52673792/71102580-5d1d0400-217e-11ea-829d-cae1d398fa28.gif)
+|:---:|
+| Responsive Design |
 
 ## Development and Production Environment Setup
 - Sublime 3 Text Editor
