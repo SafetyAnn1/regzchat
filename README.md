@@ -12,7 +12,7 @@
 
 [Development / Production Environment Setup](#development-and-production-environment-setup)
 
-## Project Summary
+## Project Summary [Top](#regzchat-web-application-project)
 
 RegzCHAT is a web application designed to offer an interface between safety professionals to network with one another.  It is a small part of the RegzHUB umbrella of services for the Safety Professional.
 
@@ -23,14 +23,14 @@ The goal of this project was to fufill the requirments of the UT Coding Bootcamp
 - Incorporates at least one external API
 - Deployed to Heroku
 
-## RegzCHAT Project Links
+## RegzCHAT Project Links  [Top](#regzchat-web-application-project)
 | Source | Link |
 | ------ | ------ |
 | Heroku | https://regzchat-ameier.herokuapp.com/ |
 | GitHub | https://github.com/SafetyAnn1/regzchat |
 
 
-## Ruby Application Gems Used in REGZCHAT
+## Ruby Application Gems Used in REGZCHAT  [Top](#regzchat-web-application-project)
 
 | Gems Used | Version |  Gem Purpose |
 | ------ | ------ | ------ |
@@ -47,7 +47,7 @@ The goal of this project was to fufill the requirments of the UT Coding Bootcamp
 | Figaro| Current | Securely configures Rails API Keys |
 
 
-## Usage Examples
+## Usage Examples  [Top](#regzchat-web-application-project)
 ## Login and Subscription Registraion and Stripe Payments 
 1. Open web application in a normal browser window 
 2. As a first time visitor you will need to Register.  Once registered you will be taken to the Pay Subscription button where you can pay via the Stripe API.  You do not have to pay at this time, but note you will NOT be given a CHAT button until you submit your payment with Stripe.
@@ -65,7 +65,7 @@ The goal of this project was to fufill the requirments of the UT Coding Bootcamp
 |:---:|:---:|
 | Register User Redirect To Payment | Stripe Payment to Subscribe User | 
 
-## How to Test the Chat Feature in RegzCHAT 
+## How to Test the Chat Feature in RegzCHAT   [Top](#regzchat-web-application-project)
 1. Open web application in a normal browser window and Log In as ## User A (make sure you have registed and paid)
 2. Open an addition browser window incognito and Log In as ## User B (make sure you have registed and paid)
 3. Go to the same room in each browser
@@ -80,7 +80,7 @@ The goal of this project was to fufill the requirments of the UT Coding Bootcamp
 | Create and Edit a Room | Deleting a Room | 
 
 
-## Development and Production Environment Setup
+## Development and Production Environment Setup  [Top](#regzchat-web-application-project)
 - Sublime 3 Text Editor
 - Vagrant Box Virtual Machine
 - Running Ruby on Rails
@@ -89,6 +89,6 @@ The goal of this project was to fufill the requirments of the UT Coding Bootcamp
 - Heroku
 - GitHub
 
-# Next Steps ...
+# Next Steps ... [Top](#regzchat-web-application-project)
 This web application was developed to demonstrate basic techniques and sound practices as well as a tool for continued success in web application development. I will be integrating this application as well as my other services Regzpert, RegzGRAM, RegzVID, RegzToDo to gether by learning and applying the principles of Micro Services where all apps will share a common login and payment system.
 
