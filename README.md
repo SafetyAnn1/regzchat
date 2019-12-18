@@ -34,6 +34,10 @@ The goal of this project was to fufill the requirments of the UT Coding Bootcamp
 
 
 ## Usage Examples
+![ResizeScreen](https://user-images.githubusercontent.com/52673792/71102580-5d1d0400-217e-11ea-829d-cae1d398fa28.gif)
+|:---:|
+| Responsive Design |
+
 | [![VideoBlocks](https://d1ow200m9i3wyh.cloudfront.net/img/assets/videoblocks/images/logo.png)](http://videoblocks.com)  | [![AudioBlocks](https://dtyn3c8zjrx01.cloudfront.net/img/assets/audioblocks/images/logo.png)](http://audioblocks.com) |
 |:---:|:---:|
 | http://videoblocks.com | http://audioblocks.com | 
