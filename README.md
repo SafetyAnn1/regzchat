@@ -70,7 +70,7 @@ The goal of this project was to fufill the requirments of the UT Coding Bootcamp
 1. Open web application in a normal browser window and Log In as ## User A (make sure you have registed and paid)
 2. Open an addition browser window incognito and Log In as ## User B (make sure you have registed and paid)
 3. Go to the same room in each browser
-4. Type a message and press send.  Watch the message pop up as each user types.
+4. Type a message and press send.  Watch the message pop-up real time as each user types a message.
 
 !![ChatRoomDemo](https://user-images.githubusercontent.com/52673792/71127225-468fa080-21b0-11ea-9d10-b2aa70ba7527.gif)
 |:---:|
