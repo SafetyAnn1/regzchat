@@ -7,7 +7,7 @@
         <h4>Get Feedback. Support. Advice. Resources. Critiques.</h4>
         <p>Join our community of safety experts, trainers, safety professionals and business owners dedicated to creating a thriving health & safety culture at work. </p>
 
-        <% if user_signed_in? %>
+        <% if user_signed_in? && current_user.subscribed? %>
         <%= link_to 'CLICK TO CHAT', rooms_path, class: 'btn btn-success btn-lg' %>
         <% else %>
         <%= link_to 'REGISTER TODAY', new_user_registration_path, class: 'btn btn-primary btn-lg' %>
@@ -80,7 +80,7 @@
         <h2>Feedback. Support. Advice. Resources. Critiques.</h2>
         <p>Join our community of safety experts, trainers, safety professionals and business owners dedicated to creating a thriving health & safety culture at work. By registering to chat with a professional today you will move closer to your company's compliance tomorrow.</p>
 
-        <% if user_signed_in? %>
+        <% if user_signed_in? && current_user.subscribed? %>
         <center><%= link_to 'START CHATTING', rooms_path, class: 'btn btn-success btn-lg' %></center>
         <% else %>
         <center><%= link_to 'REGISTER', new_user_registration_path, class: 'btn btn-primary btn-lg' %></center>
