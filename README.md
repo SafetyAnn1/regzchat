@@ -100,7 +100,7 @@ The goal of this project was to fufill the requirments of the **UT Coding Bootca
 
 # Next Steps
 
-This web application was developed to demonstrate basic techniques and sound practices as well as a tool for continued success in web application development. I will be integrating this application as well as my other services Regzpert, RegzGRAM, RegzVID, RegzToDo to gether by learning and applying the principles of Micro Services where all apps will share a common login and payment system.
+This web application was developed to demonstrate basic techniques and sound practices, as well as a tool for continued success in web application development. Next steps taken will be integrating this application to my other services; **Regzpert, RegzGRAM, RegzVID, RegzToDo** by creating Micro Services where all apps will share a common login and payment system.
 
 [Top](#regzchat-web-application-project)
 
