@@ -2,13 +2,13 @@
 
 [RegzCHAT Project Links](#regzchat-project-links)
 
-[Ruby Application Gems Used in REGZCHAT](#ruby-application-gems-used-in-regzchat)
-
 [Usage Examples](#usage-examples)
 
 - [Login and Subscription Registraion and Stripe Payments ](#login-and-subscription-registraion-and-stripe-payments )
 
 - [How to Test the Chat Feature in RegzCHAT](#how-to-test-the-chat-feature-in-regzchat)
+
+[Ruby Application Gems Used in REGZCHAT](#ruby-application-gems-used-in-regzchat)
 
 [Development / Production Environment Setup](#development-and-production-environment-setup)
 
@@ -28,24 +28,6 @@ The goal of this project was to fufill the requirments of the **UT Coding Bootca
 | ------ | ------ |
 | Heroku | https://regzchat-ameier.herokuapp.com/ |
 | GitHub | https://github.com/SafetyAnn1/regzchat |
-
-[Top](#regzchat-web-application-project)
-## Ruby Application Gems Used in REGZCHAT
-
-| Gems Used | Version |  Gem Purpose |
-| ------ | ------ | ------ |
-| Rails | 5.2.3 | System |
-| Rspec-Rails | 3.5 |  Testing and Development |
-| Jquery-Rails | Current | Jquery Library |
-| Bootstrap | 4.0.0.alpha6 | Bootstrap Library (Styling) |
-| Simple Form | Current | Forms used with Devise |
-| Font-Awesome Rails | Current | Icons Library |
-| Devise | Current | Rails authentication for Users |
-| Redis | Current | Used as a database, cache and message broker for ActionCable |
-| ActionCable | Current | Integrates WebSockets with REGZCHAT application |
-| Stripe | Current | Payment Processing API |
-| Figaro| Current | Securely configures Rails API Keys |
-
 
 [Top](#regzchat-web-application-project)
 ## Usage Examples
@@ -85,6 +67,23 @@ The goal of this project was to fufill the requirments of the **UT Coding Bootca
 
 
 [Top](#regzchat-web-application-project)
+## Ruby Application Gems Used in REGZCHAT
+
+| Gems Used | Version |  Gem Purpose |
+| ------ | ------ | ------ |
+| Rails | 5.2.3 | System |
+| Rspec-Rails | 3.5 |  Testing and Development |
+| Jquery-Rails | Current | Jquery Library |
+| Bootstrap | 4.0.0.alpha6 | Bootstrap Library (Styling) |
+| Simple Form | Current | Forms used with Devise |
+| Font-Awesome Rails | Current | Icons Library |
+| Devise | Current | Rails authentication for Users |
+| Redis | Current | Used as a database, cache and message broker for ActionCable |
+| ActionCable | Current | Integrates WebSockets with REGZCHAT application |
+| Stripe | Current | Payment Processing API |
+| Figaro| Current | Securely configures Rails API Keys |
+
+
 ## Development and Production Environment Setup
 
 - Sublime 3 Text Editor
@@ -95,8 +94,10 @@ The goal of this project was to fufill the requirments of the **UT Coding Bootca
 - Heroku
 - GitHub
 
-[Top](#regzchat-web-application-project)
+
 # Next Steps ... 
 
 This web application was developed to demonstrate basic techniques and sound practices as well as a tool for continued success in web application development. I will be integrating this application as well as my other services Regzpert, RegzGRAM, RegzVID, RegzToDo to gether by learning and applying the principles of Micro Services where all apps will share a common login and payment system.
+
+[Top](#regzchat-web-application-project)
 
