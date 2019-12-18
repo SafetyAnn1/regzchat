@@ -18,6 +18,10 @@
   }
 /*}*/
 
+.header-room {
+  padding-left: 10px;
+}
+
 .chat {
   border: 1px solid lighten(#8b8c8f, 30%);
   background: image_url('tiles.png');
@@ -34,6 +38,7 @@
 
 .chat-content {
   padding-left: 30px;
+  padding-right: 30px;
 }
 
 .fa-comments {

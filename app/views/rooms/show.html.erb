@@ -1,13 +1,14 @@
-<div class="container chatsbox">
-  <div class="row">
-    <div class="col">
-      <div class="chat" data-channel-subscribe="room" data-room-id="<%= @room.id %>">
-        <% @room_messages.each do |room_message| %>
-        <div class="chat-message-container">
-          <div class="row no-gutters">
-            <div class="col-auto text-center">
-              <img src="<%= room_message.user.gravatar_url %>" class="avatar" alt="">
-            </div>
+  <div class="container chatsbox">
+    <div class="row">
+      <div class="col chat-content">
+        <h4>Current Room: <strong><%= @room.name %></strong></h4>
+        <div class="chat" data-channel-subscribe="room" data-room-id="<%= @room.id %>">
+          <% @room_messages.each do |room_message| %>
+          <div class="chat-message-container">
+            <div class="row no-gutters">
+              <div class="col-auto text-center">
+                <img src="<%= room_message.user.gravatar_url %>" class="avatar" alt="">
+              </div>
 
             <div class="col">
               <div class="message-content">
@@ -62,12 +63,16 @@
 
     <div class="col-12 col-md-3">
       <div class="mb-3">
-        <h2><center><i class="fa fa-comments fa-3x"></i></center></h2>
-        <h2><%= @room.name %></h2>
-        <br>
-        <%= render partial: 'rooms' %>
-      </div>
-
+      <br></br> 
+        <%= render partial: 'currentrooms' %>
+     <br>
+      <% flash.each do |type, msg| %>
+        <div class="alert alert-info">
+          <%= msg %>
+        </div>
+        <% end %>
+        </div>  
+      <h3><center><i class=" fa fa-comments fa-3x"></i></center></h3> 
     </div>
   </div>
 </div>

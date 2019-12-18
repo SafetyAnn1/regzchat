@@ -4,16 +4,24 @@
       <h1><i class="pull-right fa fa-comments fa-3x"></i></h1>
       <br></br>
       <h1>Welcome to RegzCHAT!</h1>
-      <p>We need to talk.     </p>
+      <h5>We need to talk.     </h5>
 
       <hr />
 
-      <p>Create a room and start a new chat with a fellow registered safety professional.  It is recommended naming the room to your area of expertise (ex: Lockout/Tagout).<br></br>
+      <p>Create a room and start a new chat with a fellow registered safety professional.  It is recommended naming the room to your area of expertise (ex: Lockout/Tagout).<br></br><strong>OR</strong><br></br>
       Select an existing chat room from the menu and start chatting.</p>
+      <br></br>
+      <% flash.each do |type, msg| %>
+      <div class="alert alert-success">
+        <%= msg %>
+      </div>
+      <% end %>
     </div>
+
 
     <div class="col-12 col-md-3">
       <div class="mb-3">
+        <br></br>
         <%= render partial: 'rooms' %>
       </div>
     </div>

@@ -2,7 +2,7 @@ class RoomsController < ApplicationController
   # Loads:
   # @rooms = all rooms
   # @room = current room when applicable
-  before_action :authenticate_user!, only: [:new, :create, :show]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_action :load_entities
 
   def index
@@ -18,10 +18,10 @@ class RoomsController < ApplicationController
     @room = Room.new permitted_parameters
 
     if @room.save
-      flash[:success] = "Room #{@room.name} was created successfully"
+      flash[:success] = "Your room #{@room.name} was CREATED successfully! Click the desired room AND START CHATTING"
       redirect_to rooms_path
     else
-      render :new
+      render :index
     end
   end
 
@@ -33,12 +33,18 @@ class RoomsController < ApplicationController
   def edit
   end
 
+  def destroy
+    @room.destroy
+    flash[:danger] = "Your room #{@room.name} was DELETED successfully!  Click the desired room AND START CHATTING."
+    redirect_to rooms_path
+  end
+
   def update
     if @room.update_attributes(permitted_parameters)
-      flash[:success] = "Room #{@room.name} was updated successfully"
-      redirect_to rooms_path
+      flash[:info] = "Your room #{@room.name} was UPDATED successfully!"
+      redirect_back fallback_location: rooms_path
     else
-      render :new
+      render :index
     end
   end
 
