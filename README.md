@@ -6,11 +6,13 @@
 
 [Usage Examples](#usage-examples)
 
-[Login and Subscription Registraion and Stripe Payments ](#login-and-subscription-registraion-and-stripe-payments )
+- [Login and Subscription Registraion and Stripe Payments ](#login-and-subscription-registraion-and-stripe-payments )
 
-[Go to Usage Examples](#usage-examples)
+- [How to Test the Chat Feature in RegzCHAT](#how-to-test-the-chat-feature-in-regzchat)
 
 [Development / Production Environment Setup](#development-and-production-environment-setup)
+
+## Project Summary
 
 RegzCHAT is a web application designed to offer an interface between safety professionals to network with one another.  It is a small part of the RegzHUB umbrella of services for the Safety Professional.
 
@@ -69,7 +71,6 @@ The goal of this project was to fufill the requirments of the UT Coding Bootcamp
 2. Open an addition browser window incognito and Log In as ## User B (make sure you have registed and paid)
 3. Go to the same room in each browser
 4. Type a message and press send.  Watch the message pop up as each user types.
-
 
 
 
