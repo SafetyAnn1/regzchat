@@ -1,5 +1,7 @@
 # REGZCHAT Web Application Project
 
+[Go to Usage Examples](#usage-examples)
+
 > ### RegzCHAT is a web application designed to offer an interface between safety professionals to network with one another.  It is a small part of the RegzHUB umbrella of services for the Safety Professional.
 
 The goal of this project was to fufill the requirments of the UT Coding Bootcamp Solo Project (in lieu of the Agile team project).  This is the final assignment for graduation and is meant to meet the following criteria:
@@ -34,6 +36,12 @@ The goal of this project was to fufill the requirments of the UT Coding Bootcamp
 
 
 ## Usage Examples
+## How to Test the Chat Feature in RegzCHAT 
+1. Open web application in a normal browser window and Log In as ## User A (make sure you have registed and paid)
+2. Open an addition browser window incognito and Log In as ## User B (make sure you have registed and paid)
+3. Go to the same room in each browser
+4. Type a message and press send.  Watch the message pop up as each user types.
+
 ![ResizeScreen](https://user-images.githubusercontent.com/52673792/71102580-5d1d0400-217e-11ea-829d-cae1d398fa28.gif)
 |:---:|
 | Responsive Design |
@@ -45,6 +53,13 @@ The goal of this project was to fufill the requirments of the UT Coding Bootcamp
 | ![RegisterToPayment](https://user-images.githubusercontent.com/52673792/71107474-bee16c00-2186-11ea-8ae9-45332213d659.gif)  | ![StripePaymtSubscribed](https://user-images.githubusercontent.com/52673792/71107760-5ba40980-2187-11ea-8959-204dbe8461e4.gif) |
 |:---:|:---:|
 | Register User Redirect To Payment | Stripe Payment to Subscribe User | 
+
+## How to Test the Chat Feature in RegzCHAT 
+1. Open web application in a normal browser window and Log In as ## User A (make sure you have registed and paid)
+2. Open an addition browser window incognito and Log In as ## User B (make sure you have registed and paid)
+3. Go to the same room in each browser
+4. Type a message and press send.  Watch the message pop up as each user types.
+
 
 
 
