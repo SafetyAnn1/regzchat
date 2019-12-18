@@ -12,6 +12,9 @@
 
 [Development / Production Environment Setup](#development-and-production-environment-setup)
 
+[Next Steps](#next-steps)
+
+
 ## Project Summary
 
 **RegzCHAT is a web application designed to offer an interface between safety professionals to network with one another.  It is a small part of the RegzHUB umbrella of services for the Safety Professional.**
