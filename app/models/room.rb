@@ -3,5 +3,5 @@ class Room < ApplicationRecord
                          inverse_of: :room
   has_many :users, through: :room_messages
 
-  validates :name, uniqueness: { case_sensitive: false }
+  validates :name, uniqueness: true, presence: true
 end

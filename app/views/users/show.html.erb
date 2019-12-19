@@ -19,7 +19,7 @@
                 <i class="fa fa-phone-square"></i>
             </div>
             <div class="list-details">
-                <span><%= @user.phone %></span>
+                <span><%= number_to_phone(@user.phone) %></span>
                 <small>Phone Number</small>
             </div>
         </li>
@@ -114,25 +114,25 @@
             <%= simple_form_for @user, wrapper: :horizontal_form do |f| %>
             <%= f.error_notification %>
 
-            <%= f.input :fname, label:"First Name", label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-9"} %>
+            <%= f.input :fname, placeholder: "First Name", label:"First Name", label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-9"} %>
 
-            <%= f.input :lname, label:"Last Name", label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-9"} %>
+            <%= f.input :lname, placeholder: "Last Name", label:"Last Name", label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-9"} %>
 
-            <%= f.input :email, label:"Email", label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-9"} %>
+            <%= f.input :email, placeholder: "Email", label:"Email", label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-9"} %>
 
-            <%= f.input :professional_title, label:"Title", label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-9"} %>
+            <%= f.input :professional_title, placeholder: "Professional Title", label:"Title", label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-9"} %>
 
-            <%= f.input :address, label:"Address", label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-9"} %>
+            <%= f.input :address, placeholder: "Address", label:"Address", label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-9"} %>
 
-            <%= f.input :city, label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-5"} %>
+            <%= f.input :city, placeholder: "City", label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-5"} %>
 
-            <%= f.input :state, label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-2"} %>
+            <%= f.input :state, placeholder: "State", label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-2"} %>
 
-            <%= f.input :zip, label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-2"} %>
+            <%= f.input :zip, placeholder: "Zip", label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-2"} %>
 
-            <%= f.input :phone, label:"Phone", label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-9"} %>
+            <%= f.input :phone, label:"Phone", placeholder: "xxx-xxx-xxxx", label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-9 text-muted"} %>
 
-            <%= f.input :username, label:"Username", label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-9"} %>                     
+            <%= f.input :username, label:"Username", placeholder: "Email: ameier@trainosha.com to update", label_html: {class: "col-lg-3 col-form-label form-control-label"}, input_html: {class: "col-lg-9"} %>                     
 
             <div class="col-lg-9">
                 <%= f.submit 'Update', class: 'btn btn-primary' %>

@@ -9,23 +9,23 @@
   <i class="fa fa-comments fa-3x"></i>
   <% end %>
 </div>
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-    <ul class="navbar-nav ml-auto mt-2 mt-md-0">     
-      <% if user_signed_in? %> 
-      <div class="dropdown">      
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <img class="avatar" src="<%= current_user.gravatar_url %>">
-          <%= current_user.username %>
-        </a>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'dropdown-item' %>
-          <%= link_to 'My Profile', user_path(current_user), class: 'dropdown-item' %>
-        </div>                     
-      </div> 
-      <% else %>
-      <%= link_to 'LOGIN', new_user_session_path, class: "link_to" %>
-      <% end %>
-    </ul>
-  </div>
+<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+  <ul class="navbar-nav ml-auto mt-2 mt-md-0">     
+    <% if user_signed_in? %> 
+    <div class="dropdown">      
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <img class="avatar" src="<%= current_user.gravatar_url %>">
+        <%= current_user.username %>
+      </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+        <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'dropdown-item' %>
+        <%= link_to 'My Profile', user_path(current_user), class: 'dropdown-item' %>
+      </div>                     
+    </div> 
+    <% else %>
+    <%= link_to 'LOGIN', new_user_session_path, class: "link_to" %>
+    <% end %>
+  </ul>
+</div>
 </nav>
 

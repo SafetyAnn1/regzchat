@@ -12,11 +12,19 @@
       Select an existing chat room from the menu and start chatting.</p>
       <br></br>
       <% flash.each do |type, msg| %>
-      <div class="alert alert-success">
-        <%= msg %>
-      </div>
+        <% if type == "success" %>
+          <div class="alert alert-success">
+            <%= msg %>
+          </div>
+        <% else %>
+          <div class="alert alert-danger">
+            <%= msg %>
+          </div>
+        <% end %>
       <% end %>
     </div>
+
+
 
 
     <div class="col-12 col-md-3">

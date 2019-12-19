@@ -1,14 +1,14 @@
-  <div class="container chatsbox">
-    <div class="row">
-      <div class="col chat-content">
-        <h4>Current Room: <strong><%= @room.name %></strong></h4>
-        <div class="chat" data-channel-subscribe="room" data-room-id="<%= @room.id %>">
-          <% @room_messages.each do |room_message| %>
-          <div class="chat-message-container">
-            <div class="row no-gutters">
-              <div class="col-auto text-center">
-                <img src="<%= room_message.user.gravatar_url %>" class="avatar" alt="">
-              </div>
+<div class="container chatsbox">
+  <div class="row">
+    <div class="col chat-content">
+      <h4>Current Room: <strong><%= @room.name %></strong></h4>
+      <div class="chat" data-channel-subscribe="room" data-room-id="<%= @room.id %>">
+        <% @room_messages.each do |room_message| %>
+        <div class="chat-message-container">
+          <div class="row no-gutters">
+            <div class="col-auto text-center">
+              <img src="<%= room_message.user.gravatar_url %>" class="avatar" alt="">
+            </div>
 
             <div class="col">
               <div class="message-content">
@@ -18,6 +18,7 @@
 
                 <div class="text-right">
                   <small>
+                    <strong><%= current_user.username %></strong><br>
                     <%= room_message.created_at %>
                   </small>
                 </div>
